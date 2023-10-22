@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Courier+Prime:ital@0;1&family=Josefin+Sans:wght@200&family=Playfair+Display&family=Raleway:ital,wght@1,300&family=Roboto:wght@100;300&display=swap');
+*{
+	font-family: sans-serif;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+.wrapper{
+	width:100%;
+	min-height: 100vh;
+	overflow: hidden;
+}
+.row{
+	width:100%;
+	padding: 50px 60px;
+}
+.image-section{
+    width:30%;
+    float: left;
+}
+.image-section img{
+	margin-top: 25px;
+	width:620px;
+	height:650px;
+}
+.content{
+	width: 45%;
+	float: left;
+	margin-left: 270px;
+	text-align: justify;
+}
+.content h1{
+	font-size:63px;
+	letter-spacing: 2.0px;
+	margin-top: 35px;
+	color: #222;
+	font-family: 'Roboto', sans-serif;
+}
+.content h2{
+  font-family: 'Raleway', sans-serif;
+	font-style: 30px;
+	margin-top: 25px;
+	color: #b60112
+}
+.content p{
+	font-size: 18px;
+	margin-top: 10px;
+	line-height: 1.5;
+font-family: 'Raleway', sans-serif;
+}
+@media screen and (max-width: 768px){
+.image-section{
+    width:100%;
+    float: none;
+}
+.content{
+	width: 40%;
+	float: none;
+	margin-left:0px;
+}
+.content h1{
+	font-size: 30px;
+	letter-spacing: 2px;
+	margin-top: 30px;
+
+}
+.content h2{
+	font-style: 30px;
+}
+.content p{
+	font-size: 18px;
+	
+}

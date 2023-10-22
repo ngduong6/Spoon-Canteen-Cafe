@@ -1,0 +1,534 @@
+<!--
+
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+
+<h2 style="text-align:center">EVENT</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/melting_snowman_cupcakes_77135_16x9.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/melting_snowman_cupcakes_77135_16x9.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/melting_snowman_cupcakes_77135_16x9.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/melting_snowman_cupcakes_77135_16x9.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/melting_snowman_cupcakes_77135_16x9.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/melting_snowman_cupcakes_77135_16x9.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/melting_snowman_cupcakes_77135_16x9.jpg" style="width:100%" onclick="currentSlide(1)" alt="Halloween">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/melting_snowman_cupcakes_77135_16x9.jpg" style="width:100%" onclick="currentSlide(2)" alt="Christmas">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/melting_snowman_cupcakes_77135_16x9.jpg" style="width:100%" onclick="currentSlide(3)" alt="Music Show">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/melting_snowman_cupcakes_77135_16x9.jpg" style="width:100%" onclick="currentSlide(4)" alt="Valentine">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/melting_snowman_cupcakes_77135_16x9.jpg" style="width:100%" onclick="currentSlide(5)" alt="Children's Day">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/melting_snowman_cupcakes_77135_16x9.jpg" style="width:100%" onclick="currentSlide(6)" alt="Workshop">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Event</title>
+    <style>
+        /* Your CSS styles here */
+        * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+#hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1482517967863-00e15c9b44be?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.container {
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(86,86,86, 0.3);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.info {
+    width: 550px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.info h1{
+    font-size: 60px;
+    letter-spacing: 10px;
+}
+.info p {
+    color: #f0eef1;
+    font-size: 11px;
+    margin: 20px 20px;
+    line-height: 18px;
+}
+.button{
+    width: 20%;
+    padding: 8px 10px;
+    outline: none;
+    border: none;
+    display: inline-block;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    transition-duration: 0.4;
+    cursor: pointer;
+}
+.button1{
+    background-color: darkred;
+    color: white;
+    border:2px solid darkred;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+}
+#prev, #next{
+    width: 20px;
+    cursor: pointer;
+}
+.preview{
+    display: flex;
+    align-items: center;
+    margin: 0 60px;
+}
+.preview img{
+    width: 60px;
+    margin: 0 10px;
+    opacity: 0.4;
+}
+.preview .active{
+    display: block;
+    border: 3px solid #fff;
+    width: 100px;
+    opacity: 1;
+}
+    </style>
+</head>
+<body>
+    <div id="hero"></div>
+    <div class="container">
+        <div class="info">
+            <h1>Merry Christmas</h1>
+            <p>Make this Christmas unforgettable with your loved ones at Spoon Canteen & Cafe. Reserve your table for 'A Cozy Christmas Feast' and let the spirit of the season envelop you in warmth, laughter, and delicious flavors. We can't wait to celebrate Christmas with you!</p>
+            <button id="readMoreButton" class="button button1" onclick="document.location='https://skybars.vn/lighthouse-sky-bar/#home'">Read more</button>
+        </div>
+    </div>
+    <div class="slider">
+        <img src="C:\Users\X413J\Downloads\Radiance_img\Radiance_img\left-arrow.png" id="prev">
+        <div class="preview">
+            <img src="https://images.unsplash.com/photo-1482517967863-00e15c9b44be?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="active thumbnail"data-bg="https://images.unsplash.com/photo-1482517967863-00e15c9b44be?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+
+            <!-- Add other thumbnail images here -->
+            <img src="https://images.unsplash.com/photo-1615966650071-855b15f29ad1?auto=format&fit=crop&q=80&w=1932&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="thumbnail"data-bg="https://images.unsplash.com/photo-1615966650071-855b15f29ad1?auto=format&fit=crop&q=80&w=1932&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            <img src="https://images.unsplash.com/photo-1477659803863-c1bf91b34c90?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="thumbnail"data-bg="https://images.unsplash.com/photo-1477659803863-c1bf91b34c90?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            <img src="https://images.unsplash.com/photo-1622831877966-18a6c8731a01?auto=format&fit=crop&q=80&w=2073&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="thumbnail"data-bg="https://images.unsplash.com/photo-1622831877966-18a6c8731a01?auto=format&fit=crop&q=80&w=2073&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            <img src="https://images.unsplash.com/photo-1574282775995-e87dc2a0c4fd?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="thumbnail"data-bg="https://images.unsplash.com/photo-1574282775995-e87dc2a0c4fd?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+           
+        </div>
+        <img src="C:\Users\X413J\Downloads\Radiance_img\Radiance_img\right-arrow.png" id="next">
+    </div>
+
+    <script>
+        var prev = document.getElementById("prev");
+var next = document.getElementById("next");
+var thumbnail = document.getElementsByClassName("thumbnail");
+var thumbnails = document.querySelectorAll(".thumbnail");
+var hero = document.getElementById("hero");
+var info = document.querySelector(".info");
+var container = document.querySelector(".container");
+
+var slideshows = [
+    {
+        backgroundImage: 'url("https://images.unsplash.com/photo-1482517967863-00e15c9b44be?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+        title: "Slide 1 Title",
+        description: "Slide 1 Description",
+        buttonText: "Slide 1 Button"
+    },
+    {
+        backgroundImage: 'url("https://images.unsplash.com/photo-1615966650071-855b15f29ad1?auto=format&fit=crop&q=80&w=1932&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+        title: "Slide 2 Title",
+        description: "Slide 2 Description",
+        buttonText: "Slide 2 Button"
+    },
+    {
+        backgroundImage: 'url("https://images.unsplash.com/photo-1477659803863-c1bf91b34c90?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+        title: "Slide 3 Title",
+        description: "Slide 3 Description",
+        buttonText: "Slide 3 Button"
+    },
+    {
+        backgroundImage: 'url("https://images.unsplash.com/photo-1622831877966-18a6c8731a01?auto=format&fit=crop&q=80&w=2073&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+        title: "Slide 4 Title",
+        description: "Slide 4 Description",
+        buttonText: "Slide 4 Button"
+    },
+    {
+        backgroundImage: 'url("https://images.unsplash.com/photo-1574282775995-e87dc2a0c4fd?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+        title: "Slide 5 Title",
+        description: "Slide 5 Description",
+        buttonText: "Slide 5 Button"
+    }
+];
+
+var links = [
+    'https://skybars.vn/lighthouse-sky-bar/#home',
+    'https://hanoi.cloudninerestaurants.com/',
+    'https://lasinfoniavietnam.com/therhythms/',
+    'https://capellahotels.com/en/capella-hanoi/dining/divas-lounge',
+    'https://landmark72.intercontinental.com/hive-lounge'
+];
+
+let currentIndex = 0;
+
+// Function to update the background image, active thumbnail, and link
+function updateHeroAndPreview() {
+    // Update the hero background image
+    hero.style.backgroundImage = slideshows[currentIndex].backgroundImage;
+
+    // Remove the "active" class from all thumbnails
+    for (var i = 0; i < thumbnail.length; i++) {
+        thumbnail[i].classList.remove("active");
+    }
+
+    // Add the "active" class to the current thumbnail
+    thumbnail[currentIndex].classList.add("active");
+
+    // Update the link's onclick attribute
+    const readMoreButton = document.getElementById("readMoreButton");
+readMoreButton.onclick = function() {
+    window.location.href = links[currentIndex]; // Use window.location.href to navigate to the new URL
+};
+
+}
+
+next.onclick = function() {
+    if (currentIndex < slideshows.length - 1) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
+    }
+    updateHeroAndPreview();
+};
+
+prev.onclick = function() {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = slideshows.length - 1;
+    }
+    updateHeroAndPreview();
+};
+
+// Initialize with the first slide
+updateHeroAndPreview();
+
+    </script>
+</body>
+</html>
+
+<!--<script>
+        var prev = document.getElementById("prev");
+        var next = document.getElementById("next");
+        var thumbnail = document.getElementsByClassName("thumbnail");
+        var thumbnails = document.querySelectorAll(".thumbnail");
+        var hero = document.getElementById("hero");
+        var info = document.querySelector(".info");
+        var container = document.querySelector(".container");
+
+        var slideshows = [
+            {
+                backgroundImage: 'url("https://images.unsplash.com/photo-1482517967863-00e15c9b44be?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+                title: "Slide 1 Title",
+                description: "Slide 1 Description",
+                buttonText: "Slide 1 Button"
+            },
+            {
+                backgroundImage: 'url("https://images.unsplash.com/photo-1615966650071-855b15f29ad1?auto=format&fit=crop&q=80&w=1932&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+                title: "Slide 2 Title",
+                description: "Slide 2 Description",
+                buttonText: "Slide 2 Button"
+            },
+            {
+                backgroundImage: 'url("https://images.unsplash.com/photo-1477659803863-c1bf91b34c90?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+                title: "Slide 3 Title",
+                description: "Slide 3 Description",
+                buttonText: "Slide 3 Button"
+            },
+            {
+                backgroundImage: 'url("https://images.unsplash.com/photo-1622831877966-18a6c8731a01?auto=format&fit=crop&q=80&w=2073&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+                title: "Slide 4 Title",
+                description: "Slide 4 Description",
+                buttonText: "Slide 4 Button"
+            },
+            {
+                backgroundImage: 'url("https://images.unsplash.com/photo-1574282775995-e87dc2a0c4fd?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+                title: "Slide 5 Title",
+                description: "Slide 5 Description",
+                buttonText: "Slide 5 Button"
+            }
+        ];
+            var links = [
+                'https://skybars.vn/lighthouse-sky-bar/#home',
+                'https://hanoi.cloudninerestaurants.com/',
+                'https://lasinfoniavietnam.com/therhythms/',
+                'https://capellahotels.com/en/capella-hanoi/dining/divas-lounge',
+                'https://landmark72.intercontinental.com/hive-lounge'
+];
+
+        let currentIndex = 0;
+
+        function updateContentInfo() {
+            hero.style.backgroundImage = slideshows[currentIndex].backgroundImage;
+            info.querySelector("h1").textContent = slideshows[currentIndex].title;
+            info.querySelector("p").textContent = slideshows[currentIndex].description;
+            info.querySelector(".button").textContent = slideshows[currentIndex].buttonText;
+            // Add a click event listener to each thumbnail
+thumbnails.forEach(function(thumbnail, index) {
+    thumbnail.addEventListener("click", function() {
+        // Set the hero background image to the clicked thumbnail's data-bg attribute
+        hero.style.backgroundImage = 'url("' + this.getAttribute("data-bg") + '")';
+
+        // Remove the "active" class from all thumbnails
+        thumbnails.forEach(function(thumb) {
+            thumb.classList.remove("active");
+        });
+
+        // Add the "active" class to the clicked thumbnail
+        this.classList.add("active");
+    });
+});
+        }
+        // Function to update the background image and active thumbnail
+function updateHeroAndPreview() {
+    // Update the hero background image
+    hero.style.backgroundImage = slideshows[currentIndex].backgroundImage;
+
+    // Remove the "active" class from all thumbnails
+    for (var i = 0; i < thumbnail.length; i++) {
+        thumbnail[i].classList.remove("active");
+    }
+
+    // Add the "active" class to the current thumbnail
+    thumbnail[currentIndex].classList.add("active");
+    // Update the link's onclick attribute
+    const readMoreButton = document.getElementById("readMoreButton");
+    readMoreButton.onclick = function() {
+        document.location = 'new_link.html'; // Change 'new_link.html' to the desired URL
+    };
+}
+
+       next.onclick = function() {
+            if (currentIndex < slideshows.length - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            updateContentInfo();
+            updateHeroAndPreview();
+        };
+
+        prev.onclick = function() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = slideshows.length - 1;
+            }
+            updateContentInfo();
+            updateHeroAndPreview();
+        };
+
+        // Initialize with the first slide
+        updateContentInfo();
+        updateHeroAndPreview();
+    </script>-->

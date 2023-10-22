@@ -1,0 +1,26 @@
+*{
+    font-family: Karma;
+}
+#content .products-list {
+    margin-top: 50px;
+}
+
+#content .individual-item {
+    float: left; 
+    text-align: center;
+    width: calc(100% / 3);
+}
+
+#content .individual-item-img {
+    width: 300px;
+    margin-top: 15px;
+    border-radius: 4px; 
+}
+#content .individual-item-img:hover{
+    transform: scale(1.2);
+}
+#content h2 p{
+    color: black;
+}
+
+

@@ -1,0 +1,165 @@
+body {
+    background-color: transparent;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+div#left{
+     background-color: rgba(128, 0, 0, 0.9);
+    padding: auto; 
+    color: white; 
+    font-size: 16px;
+    clear: left;
+    float: left;
+    height:1200px;
+    width: 25%;
+    color: white;
+    margin: auto;
+}
+}
+.box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.box li {
+  margin-top: 50px;
+  margin-bottom:40px; 
+  margin-left: 40px;
+  position: relative; 
+}
+
+.box li a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1.5px;
+}
+
+.box li a:hover {
+    color: gainsboro;
+}
+
+/*gạch chân*/
+.box li::before {
+  content: "";
+  width: 80%; 
+  height: 1px; 
+  background-color: #fff; 
+  position: absolute; 
+  bottom:-50%; 
+  left: 0; 
+}
+
+
+h1, .content {
+    display: inline-block;
+    align-items: center;
+}
+
+.header {
+    background-color:Maroon;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar {
+   
+    background-color:#3B0909;
+    color: #fff;
+    
+}
+.sidebar a{
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color:#B8B8B8  ;
+    transition: color 0.1s ease
+}
+
+.sidebar ul {
+    list-style-type: none;
+    margin:auto;
+    padding:0;
+    display: flex;
+  
+}
+.sidebar li{
+    margin:0;
+    padding:0;
+}
+
+.sidebar ul li {
+    padding: 5px;
+}
+a:hover {
+  
+    color:white ; 
+}
+
+
+.sidebar-one{
+    background-color: DarkSeaGreen;
+    color: white;
+    float: right;
+    width: auto;
+    height: 200px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+p{
+    color: #906060  ;
+}
+h2#h1{
+    color: white;
+    font-size: 38px;
+    float: right;
+    width: 101%;
+}
+p#p1{
+    color:#F1EBE4 ;
+    margin-top: 0;
+    float: right;
+    width:96%;
+}
+
+
+div#right{
+    background-color: #DDDAD0;
+    float:left;
+    height:500px;
+    width:75%;
+    height: 1200px;
+    margin: auto;
+    padding: auto;
+}
+/*#B8B8B8*/
+
+.box ul {
+  list-style-type: none;
+}
+div{
+    margin-bottom: 5px;
+
+}
+
+
+h2{ font-size: 30px;
+    color:#34495E  ;
+    text-indent: 5%;
+    margin-top: 40px;
+    margin-bottom:20px;
+    letter-spacing:1.5px }
+
+p#p2{
+    color:black;
+    float:right;
+    width:95%;
+    margin-bottom:20px;
+}
+
+

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="SpoonCanteen&Cafe.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="footer_remake.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>Event</title>
+    <style> * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+#hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1482517967863-00e15c9b44be?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    margin-top: 0px;
+}
+.container {
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(86,86,86, 0.3);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 95px;
+}
+.info {
+    width: 550px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.info h1{
+    font-size: 60px;
+    letter-spacing: 10px;
+}
+.info p {
+    color: #f0eef1;
+    font-size: 12px;
+    margin: 20px 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-align: justify;
+    margin-right: 25px;
+}
+.button{
+    width: 20%;
+    padding: 8px 10px;
+    outline: none;
+    border: none;
+    display: inline-block;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    transition-duration: 0.4;
+    cursor: pointer;
+}
+.button1{
+    background-color: darkred;
+    color: white;
+    border:2px solid red;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.button1:hover {
+    background-color: rgba(77, 0, 0.6);
+
+}
+.slider {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+}
+#prev, #next{
+    width: 20px;
+    cursor: pointer;
+}
+.preview{
+    display: flex;
+    align-items: center;
+    margin: 0 60px;
+}
+.preview img{
+    width: 60px;
+    margin: 0 10px;
+    opacity: 0.4;
+}
+.preview .active{
+    display: block;
+    border: 3px solid #fff;
+    width: 100px;
+    opacity: 1;
+}
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+       <h1 class="logo">Spoon<span>Canteen & Cafe</span></h1>
+       <ul>
+         <li><a href="SpoonCanteen&Cafe.html">HOME</a></li>
+         <li><a href="AboutUs.html">ABOUT US</a></li>
+         <li><a href="#">MENU<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-menu">
+                <ul>
+                  <li><a href="Food.html">Food</a></li> 
+                  <li><a href="Drinks.html">Drinks</a></li>
+                </ul>
+              </div>
+          </li>
+          <li><a href="#">BLOG<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-menu">
+                <ul>
+                  <li><a href="News.html">News</a></li>
+                  <li><a href="Event.html">Events</a></li>
+                </ul>
+          </li>
+          <li><a href="feature_items.html">STORE</a></li>
+          <li><a href="club.html">CLUB</a></li>
+      </ul>
+    </div>
+   <br><br><br><br>
+    <div id="hero"></div>
+    <div class="container">
+        <div class="info">
+            <h1 id="slideTitle">Merry Christmas</h1>
+            <p id="slideDescription">Make this Christmas unforgettable with your loved ones at Spoon Canteen & Cafe. Reserve your table for 'A Cozy Christmas Feast' and let the spirit of the season envelop you in warmth, laughter, and delicious flavors. We can't wait to celebrate Christmas with you!</p>
+            <button id="readMoreButton" class="button button1" onclick="document.location='https://skybars.vn/lighthouse-sky-bar/#home'">Read more</button>
+        </div>
+    </div>
+    <div class="slider">
+        <img src="left_arrow.png" id="prev">
+        <div class="preview">
+            <img src="https://images.unsplash.com/photo-1482517967863-00e15c9b44be?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="active thumbnail"data-bg="https://images.unsplash.com/photo-1482517967863-00e15c9b44be?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            <img src="https://images.unsplash.com/photo-1510276113764-7ac28415a9ec?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="thumbnail"data-bg="https://images.unsplash.com/photo-1510276113764-7ac28415a9ec?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            <img src="https://images.unsplash.com/photo-1477659803863-c1bf91b34c90?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="thumbnail"data-bg="https://images.unsplash.com/photo-1477659803863-c1bf91b34c90?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            <img src="https://images.unsplash.com/photo-1614113036347-9f60df80730a?auto=format&fit=crop&q=80&w=1797&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="thumbnail"data-bg="https://images.unsplash.com/photo-1614113036347-9f60df80730a?auto=format&fit=crop&q=80&w=1797&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="thumbnail"data-bg="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+           
+        </div>
+        <img src="right_arrow.png" id="next">
+    </div>
+
+    <script>
+        var prev = document.getElementById("prev");
+var next = document.getElementById("next");
+var thumbnail = document.getElementsByClassName("thumbnail");
+var thumbnails = document.querySelectorAll(".thumbnail");
+var hero = document.getElementById("hero");
+var info = document.querySelector(".info");
+var container = document.querySelector(".container");
+var slideshows = [
+    {
+        backgroundImage: 'url("https://images.unsplash.com/photo-1482517967863-00e15c9b44be?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+        title: "Christmas Night",
+        description: "Make this Christmas unforgettable with your loved ones at Spoon Canteen & Cafe. Reserve your table for 'A Cozy Christmas Feast' and let the spirit of the season envelop you in warmth, laughter, and delicious flavors. We can't wait to celebrate Christmas with you!"
+    },
+    {
+        backgroundImage: 'url("https://images.unsplash.com/photo-1510276113764-7ac28415a9ec?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+        title: "Slide 2 Title",
+        description: "Slide 2 Description"
+    },
+    {
+        backgroundImage: 'url("https://images.unsplash.com/photo-1477659803863-c1bf91b34c90?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+        title: "Spooktacular Halloween Night",
+        description: "Get ready to celebrate Halloween like never before! Spoon Canteen & Cafe invites you to our 'Haunted Harvest Feast' on October 31st, 2023, from 6:00 PM to 10:00 PM. Put on your best costumes and prepare for a night of spine-tingling fun, delectable cuisine, and eerie entertainment!"
+    },
+    {
+        backgroundImage: 'url("https://images.unsplash.com/photo-1614113036347-9f60df80730a?auto=format&fit=crop&q=80&w=1797&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+        title: "Children's Day",
+        description: "Calling all families! Join us at Spoon Canteen & Cafe for a magical Children's Day brunch on June 1st, 2024, from 11:00 AM to 4:00 PM. We've prepared a 'Kids' Wonderland Brunch' that's perfect for families looking to create special memories on this special day."
+    },
+    {
+        backgroundImage: 'url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+        title: "Music Shows",
+        description: "At Spoon Canteen & Cafe, we're thrilled to share the latest updates on our incredible workshops and music shows. It's been a whirlwind of creativity, talent, and unforgettable moments in our cozy venue."
+    }
+];
+
+var links = [
+    'christmas.html',
+    'https://hanoi.cloudninerestaurants.com/',
+    'Halloween.html',
+    'Childrenday.html',
+    'music.html'
+];
+
+let currentIndex = 0;
+
+function updateHeroAndPreview() {
+    hero.style.backgroundImage = slideshows[currentIndex].backgroundImage;
+
+      for (var i = 0; i < thumbnail.length; i++) {
+        thumbnail[i].classList.remove("active");
+    }
+
+    thumbnail[currentIndex].classList.add("active");
+
+      var slideTitle = document.getElementById("slideTitle");
+    var slideDescription = document.getElementById("slideDescription");
+
+    slideTitle.textContent = slideshows[currentIndex].title;
+    slideDescription.textContent = slideshows[currentIndex].description;
+
+    const readMoreButton = document.getElementById("readMoreButton");
+readMoreButton.onclick = function() {
+    window.location.href = links[currentIndex]; 
+};
+}
+
+next.onclick = function() {
+    if (currentIndex < slideshows.length - 1) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
+    }
+    updateHeroAndPreview();
+};
+
+prev.onclick = function() {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = slideshows.length - 1;
+    }
+    updateHeroAndPreview();
+};
+
+updateHeroAndPreview();
+    </script>
+
+<!-- Footer -->
+<footer class="w3-center w3-padding-32" style="background-color:rgb(77, 0, 0); text-align: center;  padding-top: 30px; padding-bottom: 48px; margin-top: 0px;">
+  <div class="footer-content">
+      <p style="font-size: 20px;">Spoonfuls of flavor, Served with Love!</p>
+      <br>
+      <div class="icons">
+        <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+        <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Fspoon_canteen_and_cafe%3Figshid%3DOGQ5ZDc2ODk2ZA%253D%253D%26utm_source%3Dqr%26fbclid%3DIwAR0R-57ZIfWIwynwtwh95WlJXB7pcEI9vwse9d6_PPLFJJU11NR5wbaK5iw&h=AT1KGe--6YvHIUd3QduLKVgeg3lfs4hJzk4wYjSug09N_5aA_n0Ruk_gZFfxPFHTZPBcaIS4S1skGuBSemvAnhKFmczutylFyyy28F1XLSbIXE68p2S8lylypbvy1WLm1q8XZA"><i class='bx bxl-instagram-alt'></i></a>
+        <a href="#"><i class='bx bxl-tiktok'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+      </div>
+    </div>
+  <p class="copyright" style="color: blanchedalmond; margin-top: 25px;"> &copy;2023 Spoon Canteen & Cafe. All rights reserved. </a></p> 
+</footer>
+   
+
+</body>
+</html>
+
+
+

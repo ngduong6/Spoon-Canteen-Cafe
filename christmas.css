@@ -1,0 +1,22 @@
+
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+
+/* Center layout */
+.center-layout {
+    background-color: rgb(51, 0, 0);
+    opacity: 70%;
+}
+.center-layout__item {
+    color: gainsboro;
+    font-size: 42px;
+    font-weight: 700;
+    margin: auto;
+}
+
+
